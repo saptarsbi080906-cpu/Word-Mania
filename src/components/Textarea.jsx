@@ -47,17 +47,17 @@ const Textarea = (props) => {
       <h3 className="mb-3">{props.heading}</h3>
       <div className="mb-3">
         <textarea
-          className="form-control"
+          className={`form-control custom-textarea ${props.mode === 'dark' ? 'placeholder-white' : 'placeholder-black'}`}
           id="myBox"
           rows="8"
           placeholder="Enter text here..."
           value={text}
           onChange={handleOnChange}
           style={{
-            backgroundColor: props.mode === "light" ? "white" : "#2c3034",
+            backgroundColor: props.mode === "light" ? "white" : "#353d45",
             color: props.mode === "light" ? "black" : "white",
             border:
-              props.mode === "light" ? "1px solid #ced4da" : "1px solid white",
+              props.mode === "light" ? "1px solid #ced4da" : "1px solid white"
           }}
         ></textarea>
 
