@@ -17,7 +17,7 @@ const About = (props) => {
                             aria-controls="collapseOne"
                         
                         >
-                            Analyze Your Text
+                           <strong>Analyze Your Text</strong>
                         </button>
                     </h2>
                     <div
@@ -26,7 +26,7 @@ const About = (props) => {
                         data-bs-parent="#accordionExample"
                     >
                         <div className="accordion-body">
-                            <b>Wordmania gives you a way to analyze your text quickly and efficiently. Be it word count, character count or time to read, Wordmania provides you with the necessary tools to understand your text better.</b>
+                            Wordmania gives you a way to analyze your text quickly and efficiently. Be it word count, character count or time to read, Wordmania provides you with the necessary tools to understand your text better.
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const About = (props) => {
                             aria-controls="collapseTwo"
                         
                         >
-                            Free To Use
+                            <strong>Free To Use</strong>
                         </button>
                     </h2>
                     <div
@@ -50,7 +50,7 @@ const About = (props) => {
                         data-bs-parent="#accordionExample"
                     >
                         <div className={`accordion-item bg-${props.mode} text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-                            <b>Word Mania is a free character counter tool that provides instant character count & word count statistics for a given text. Word Mania reports the number of words and characters. Thus it is suitable for writing text with word/ character limit.</b>
+                            Word Mania is a free character counter tool that provides instant character count & word count statistics for a given text. Word Mania reports the number of words and characters. Thus it is suitable for writing text with word/ character limit.
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const About = (props) => {
                             aria-controls="collapseThree"
                         
                         >
-                            Browser Compatible
+                            <strong>Browser Compatible</strong>
                         </button>
                     </h2>
                     <div
@@ -74,7 +74,7 @@ const About = (props) => {
                         data-bs-parent="#accordionExample"
                     >
                         <div className="accordion-body">
-                            <b>This word counter software works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to count characters in facebook, blog, books, excel document, pdf document, essays, etc.</b>
+                            This word counter software works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to count characters in facebook, blog, books, excel document, pdf document, essays, etc.
                         </div>
                     </div>
                 </div>
