@@ -41,13 +41,22 @@ const Textarea = (props) => {
     color: "white",
     borderColor: props.mode === "light" ? "#0d6efd" : "white",
   };
+  const handleCopy = () => {
+    navigator.clipboard.writeText(text);
+    props.showAlert("success", "Text copied to clipboard!");
+  };
+  const handleExtraSpaces = () => {
+  let newText = text.split(/\s+/); 
+  setText(newText.join(" ").trim()); 
+  props.showAlert("success", "Extra spaces removed!");
+};
 
   return (
     <div style={{ color: props.mode === "light" ? "black" : "white" }}>
       <h3 className="mb-3">{props.heading}</h3>
       <div className="mb-3">
         <textarea
-          className={`form-control custom-textarea ${props.mode === 'dark' ? 'placeholder-white' : 'placeholder-black'}`}
+          className={`form-control custom-textarea ${props.mode === "dark" ? "placeholder-white" : "placeholder-black"}`}
           id="myBox"
           rows="8"
           placeholder="Enter text here..."
@@ -57,11 +66,16 @@ const Textarea = (props) => {
             backgroundColor: props.mode === "light" ? "white" : "#353d45",
             color: props.mode === "light" ? "black" : "white",
             border:
-              props.mode === "light" ? "1px solid #ced4da" : "1px solid white"
+              props.mode === "light" ? "1px solid #ced4da" : "1px solid white",
           }}
         ></textarea>
 
-        <button className="btn my-2" onClick={handleConvert} style={btnStyle}>
+        <button
+          className="btn my-2"
+          onClick={handleConvert}
+          style={btnStyle}
+          disabled={text.length === 0}
+        >
           {text.length > 0 && text === text.toUpperCase()
             ? "Convert To Lowercase"
             : "Convert To Uppercase"}
@@ -71,6 +85,7 @@ const Textarea = (props) => {
           className="btn my-2 mx-2"
           onClick={handleMakeBold}
           style={btnStyle}
+          disabled={text.length === 0}
         >
           {isBold ? "Make Normal" : "Make Bold"}
         </button>
@@ -79,8 +94,25 @@ const Textarea = (props) => {
           className="btn my-2 mx-2"
           onClick={handleClear}
           style={btnStyle}
+          disabled={text.length === 0}
         >
           Clear Text
+        </button>
+        <button
+          className="btn my-2 mx-2"
+          onClick={handleCopy}
+          style={btnStyle}
+          disabled={text.length === 0}
+        >
+          Copy Text
+        </button>
+        <button
+          className="btn my-2 mx-2"
+          onClick={handleExtraSpaces}
+          style={btnStyle}
+          disabled={text.length === 0}
+        >
+          Remove Extra Spaces
         </button>
       </div>
 
