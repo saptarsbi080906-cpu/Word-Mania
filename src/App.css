@@ -8,3 +8,6 @@
 .active {
   font-weight: bold;
 }
+.accordion-button::after{
+  filter: invert(1);
+}
