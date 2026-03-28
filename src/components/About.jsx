@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const About = (props) => {
     document.title = "Wordmania - About Us";
     return (
-        <div className="container my-3">
+        <div className="container my-3 mb-5 pb-5">
             <h2 className="my-3">About Us</h2>
             <div className="accordion" id="accordionExample">
                 <div className={`accordion-item bg-${props.mode} text-${props.mode === 'light' ? 'dark' : 'light'}`}>
