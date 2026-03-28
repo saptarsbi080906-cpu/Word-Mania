@@ -60,7 +60,7 @@ const Textarea = (props) => {
           id="myBox"
           rows="8"
           placeholder="Enter text here..."
-          value={text}
+          // value={text}
           onChange={handleOnChange}
           style={{
             backgroundColor: props.mode === "light" ? "white" : "#353d45",
